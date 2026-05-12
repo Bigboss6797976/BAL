@@ -1,0 +1,43 @@
+{
+  "name": "blockchain-attack-lab",
+  "version": "2.0.0",
+  "description": "Advanced Blockchain Attack Vectors Lab - Termux/Android Ready",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network",
+    "test": "npx hardhat test",
+    "node": "npx hardhat node",
+    "attack:reentrancy": "node scripts/attacks/reentrancy-attack.js",
+    "attack:flashloan": "node scripts/attacks/flashloan-attack.js",
+    "attack:mev": "node scripts/attacks/mev-attack.js",
+    "attack:gas": "node scripts/attacks/gas-attack.js",
+    "attack:phishing": "node scripts/attacks/phishing-attack.js",
+    "attack:backdoor": "node scripts/attacks/backdoor-attack.js",
+    "attack:blind": "node scripts/attacks/blind-sign-attack.js",
+    "attack:qr": "node scripts/attacks/qr-attack.js",
+    "attack:access": "node scripts/attacks/access-control-attack.js",
+    "attack:random": "node scripts/attacks/randomness-attack.js",
+    "attack:delegate": "node scripts/attacks/delegate-attack.js",
+    "attack:selfdestruct": "node scripts/attacks/selfdestruct-attack.js",
+    "attack:storage": "node scripts/attacks/storage-collision-attack.js",
+    "attack:time": "node scripts/attacks/timestamp-attack.js",
+    "attack:batch": "node scripts/attacks/batch-attack.js",
+    "attack:fullchain": "node scripts/attacks/full-chain-attack.js",
+    "server": "node server.js",
+    "fix:termux": "bash termux-fix.sh"
+  },
+  "devDependencies": {
+    "hardhat": "2.19.5",
+    "@nomiclabs/hardhat-ethers": "2.2.3",
+    "ethers": "5.7.2",
+    "chai": "4.3.10",
+    "@types/node": "20.10.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.9.3",
+    "express": "4.18.2",
+    "cors": "2.8.5",
+    "body-parser": "1.20.2",
+    "dotenv": "16.3.1"
+  }
+}
